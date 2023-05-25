@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Encuesta HelpDesk</title>
-	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
+    <title>Encuesta HelpDesk</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/css/star-rating.min.css" />
     <link rel="stylesheet" href="../../public/css/lib/bootstrap-sweetalert/sweetalert.css">
     <link rel="stylesheet" href="../../public/css/separate/vendor/sweet-alert-animations.min.css">
 </head>
+
 <body>
 
     <div class="container">
@@ -88,12 +91,48 @@
         <hr />
 
         <div id="panel1">
-
             <section class="row">
-                <div class="col-md-12 text-center">
-                    <input id="tick_estre" name="tick_estre" class="rating rating-loading" data-min="0" data-max="5" data-step="1" value="0">
+                <div class="col-md-12">
+                    <h3>Pregunta 1</h3>
+                    <p>Descripción de la pregunta 1.</p>
                 </div>
             </section>
+
+            <section class="row">
+                <div class="col-md-12">
+                    <input id="pregunta1_estre" name="pregunta1_estre" class="rating rating-loading" data-min="0"
+                        data-max="5" data-step="1" value="0">
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="col-md-12">
+                    <h3>Pregunta 2</h3>
+                    <p>Descripción de la pregunta 2.</p>
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="col-md-12">
+                    <input id="pregunta2_estre" name="pregunta2_estre" class="rating rating-loading" data-min="0"
+                        data-max="5" data-step="1" value="0">
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="col-md-12">
+                    <h3>Pregunta 3</h3>
+                    <p>Descripción de la pregunta 3.</p>
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="col-md-12">
+                    <input id="pregunta3_estre" name="pregunta3_estre" class="rating rating-loading" data-min="0"
+                        data-max="5" data-step="1" value="0">
+                </div>
+            </section>
+
 
             <section class="row">
                 <div class="col-md-12">
@@ -106,28 +145,30 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="comment">Comentarios:</label>
-                        <textarea id="tick_coment" name="tick_coment" class="form-control" rows="6" id="comentarios"></textarea>
+                        <textarea id="tick_coment" name="tick_coment" class="form-control" rows="6"
+                            id="comentarios"></textarea>
                     </div>
                 </div>
             </section>
 
             <section class="row">
                 <div class="col-md-12">
-                    <button type="button" class="btn btn-info" id="btnguardar">Guardar Encuesta</button>
+                    <button type="button" class="btn btn-info" id="btnguardar_encuesta">Guardar Encuesta</button>
                 </div>
             </section>
-
+            
         </div>
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
-<script src="../../public/js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
-<script type="text/javascript" src="encuesta.js"></script>
-<script>
-    $('#tick_estre').rating({ 
-        showCaption: false
-    });
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-star-rating/4.0.2/js/star-rating.min.js"></script>
+    <script src="../../public/js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+    <script type="text/javascript" src="encuesta.js"></script>
+    <script>
+        $('#tick_estre').rating({
+            showCaption: false
+        });
+    </script>
 </body>
+
 </html>

@@ -437,8 +437,15 @@
 
         /* TODO: Insertar valor de encuesta,estrellas y comentarios */
         case "encuesta":
-            $ticket->insert_encuesta($_POST["tick_id"],$_POST["tick_estre"],$_POST["tick_coment"]);
+            $ticket->insert_encuesta(
+                $_POST["tick_id"],
+                $_POST["tick_coment"],
+                $_POST["pregunta1_estre"],
+                $_POST["pregunta2_estre"],
+                $_POST["pregunta3_estre"]
+            );
             break;
+        
 
     }
 ?>

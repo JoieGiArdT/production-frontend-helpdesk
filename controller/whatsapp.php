@@ -18,5 +18,9 @@
         case "w_ticket_asignado":
             $whatsapp->w_ticket_asignado($_POST["tick_id"]);
             break;
+        /*TODO: enviar ticket Respondido con el ID */
+        case "w_ticket_respuesta":
+            $whatsapp->w_ticket_respuesta($_POST["tick_id"]);
+            break;  
     }
 ?>

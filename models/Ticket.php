@@ -322,22 +322,27 @@
         }
 
         /* TODO: Actualizar valor de estrellas de encuesta */
-        public function insert_encuesta($tick_id,$tick_estre,$tick_comment){
-            $conectar= parent::conexion();
+        public function insert_encuesta($tick_id, $tick_comment, $pregunta1_estre, $pregunta2_estre, $pregunta3_estre) {
+            $conectar = parent::conexion();
             parent::set_names();
-            $sql="update tm_ticket 
-                set	
-                    tick_estre = ?,
-                    tick_coment = ?
-                where
-                    tick_id = ?";
-            $sql=$conectar->prepare($sql);
-            $sql->bindValue(1, $tick_estre);
+            $sql = "UPDATE tm_ticket 
+                    SET	
+                        tick_coment = ?,
+                        pregunta1_estre = ?,
+                        pregunta2_estre = ?,
+                        pregunta3_estre = ?
+                    WHERE
+                        tick_id = ?";
+            $sql = $conectar->prepare($sql);
             $sql->bindValue(2, $tick_comment);
-            $sql->bindValue(3, $tick_id);
+            $sql->bindValue(3, $pregunta1_estre);
+            $sql->bindValue(4, $pregunta2_estre);
+            $sql->bindValue(5, $pregunta3_estre);
+            $sql->bindValue(6, $tick_id);
             $sql->execute();
-            return $resultado=$sql->fetchAll();
+            return $resultado = $sql->fetchAll();
         }
+        
 
         /* TODO: Filtro Avanzado de ticket */
         public function filtrar_ticket($tick_titulo,$cat_id,$prio_id){

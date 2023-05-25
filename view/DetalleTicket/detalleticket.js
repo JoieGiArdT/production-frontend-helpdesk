@@ -144,11 +144,17 @@ $(document).on("click","#btnenviar", function(){
             contentType: false,
             processData: false,
             success: function(data){
+                console.log('jeje');
                 console.log(data);
                 listardetalle(tick_id);
+                
                 /* TODO: Limpiar inputfile */
                 $('#fileElem').val('');
                 $('#tickd_descrip').summernote('reset');
+                
+                $.post("../../controller/whatsapp.php?op=w_ticket_respuesta", {tick_id : tick_id}, function (data) {
+                    
+                });
                 swal("Correcto!", "Registrado Correctamente", "success");
             }
         });
