@@ -69,7 +69,9 @@
                 tm_ticket.tick_estado,
                 tm_ticket.fech_crea,
                 tm_ticket.fech_cierre,
-                tm_ticket.tick_estre,
+                tm_ticket.pregunta1_estre,
+                tm_ticket.pregunta2_estre,
+                tm_ticket.pregunta3_estre,
                 tm_ticket.tick_coment,
                 tm_ticket.usu_asig,
                 tm_usuario.usu_nom,
@@ -334,11 +336,11 @@
                     WHERE
                         tick_id = ?";
             $sql = $conectar->prepare($sql);
-            $sql->bindValue(2, $tick_comment);
-            $sql->bindValue(3, $pregunta1_estre);
-            $sql->bindValue(4, $pregunta2_estre);
-            $sql->bindValue(5, $pregunta3_estre);
-            $sql->bindValue(6, $tick_id);
+            $sql->bindValue(1, $tick_comment);
+            $sql->bindValue(2, $pregunta1_estre);
+            $sql->bindValue(3, $pregunta2_estre);
+            $sql->bindValue(4, $pregunta3_estre);
+            $sql->bindValue(5, $tick_id);
             $sql->execute();
             return $resultado = $sql->fetchAll();
         }

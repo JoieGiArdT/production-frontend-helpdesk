@@ -6,7 +6,6 @@ $(document).ready(function () {
     var tick_id = getUrlParameter('ID');
     listardetalle(tick_id);
     console.log(tick_id);
-
     /* TODO: inicializamos input de estrellas */
     $('#tick_estre').on('rating.change', function () {
         console.log($('#tick_estre').val());
@@ -38,17 +37,19 @@ function listardetalle(tick_id) {
         $('#tick_titulo').val(data.tick_titulo);
         $('#prio_nom').val(data.prio_nom);
         $('#lblfechcierre').val(data.fech_cierre);
+        $('#tick_coment').val(data.tick_coment); // Set the ticket comment value
 
         if (data.tick_estado_texto == 'Abierto') {
             window.open('http://localhost:80/HelpDesk/', '_self');
         } else {
-            if (data.tick_estre == null) {
-
+            if (data.pregunta1_estre == null && data.pregunta2_estre == null && data.pregunta3_estre == null) {
+                console.log("data");
             } else {
                 $('#panel1').hide();
             }
         }
     });
+    
 }
 
 /* TODO: Obtener ID de la Url */

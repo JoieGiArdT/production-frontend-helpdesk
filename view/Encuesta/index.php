@@ -151,7 +151,7 @@
                 </div>
             </section>
 
-            <section class="row">
+            <section class="row" id="button_send">
                 <div class="col-md-12">
                     <button type="button" class="btn btn-info" id="btnguardar_encuesta">Guardar Encuesta</button>
                 </div>
